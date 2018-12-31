@@ -1,0 +1,86 @@
+﻿@model MVC_Model_Employee.Models.EmployeeModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Find</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div align="center">
+        <h4>EmployeeModel</h4>
+        <hr />
+        <dl class="dl-horizontal" style="width:50%;text-align:left;">
+            <dt>
+                @Html.DisplayNameFor(model => model.employeeid)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.employeeid)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.employeename)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.employeename)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.employeecity)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.employeecity)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.employeeemail)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.employeeemail)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.password)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.password)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.gender)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.gender)
+            </dd>
+    
+            <dt>
+                <img height="200px" width="250px" src=@Model.employeeimageaddress />
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.employeeimageaddress)
+            </dd>
+
+        </dl>
+        @Html.ActionLink("Edit", "Edit", "Employee", new { id = Model.employeeid }, null)
+        @Html.ActionLink("Delete", "Delete", "Employee", new { id = Model.employeeid }, null)
+    </div>
+    
+</body>
+</html>
